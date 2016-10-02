@@ -1,0 +1,25 @@
+{
+  "name": "colout",
+  "version": "0.0.1",
+  "description": "Node JS utility that allows you to output color text in console",
+  "main": "colout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberaktiv/colout.git"
+  },
+  "keywords": [
+    "color",
+    "output",
+    "nodejs",
+    "console"
+  ],
+  "author": "cyberaktiv@yandex.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyberaktiv/colout/issues"
+  },
+  "homepage": "https://github.com/cyberaktiv/colout#readme"
+}
