@@ -11,7 +11,7 @@ colout.red('red message', '\n', {'name': 'test'}, '\n')
 	  .mySetMethod('message from my method');
 ```
 
-### Getting started
+## Getting started
 
 ### Install via npm:
 ```javascript
