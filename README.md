@@ -10,7 +10,6 @@ colout.red('red message', '\n', {'name': 'test'}, '\n')
 	  .error('this is error message')
 	  .mySetMethod('message from my method');
 ```
-
 ## Getting started
 
 ### Install via npm:
