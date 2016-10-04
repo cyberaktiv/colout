@@ -49,8 +49,9 @@ var Valid = {
 	},
 };
 
-var _exports = {
-	set: function(name, color){
+var Colout = function(){
+	var self = this;
+	this.set = function(name, color){
 		
 		if(!Valid.name(name)) return;
 		color = (color && Valid.color(color))?color:'white';
@@ -59,19 +60,21 @@ var _exports = {
 			var args = [].slice.call(arguments);
 			for(var i = 0; i < args.length; i++){
 				Message.print(args[i], color);
-			}
-			if(args.length === 1) Message.print('\n');
+			}			
 			return this;
 		};
 		return this;
-	},
-	genColors: function(){
-		var self = this;
-		Colors.list.forEach(function(color){
-			self.set(color, color);
-		});
+	};
+	this.endl = function(){
+		process.stdout.write('\n');
 		return this;
-	},
+	};
+	var genColors = function(obj){
+		Colors.list.forEach(function(color){
+			obj.set(color, color);
+		});
+	};
+	genColors(this);
 };
 
-module.exports = _exports;
+module.exports = new Colout();

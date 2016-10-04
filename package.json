@@ -1,6 +1,6 @@
 {
   "name": "colout",
-  "version": "0.0.2",
+  "version": "0.1.3",
   "description": "Node JS utility that allows you to output color text in console",
   "main": "colout.js",
   "scripts": {
@@ -13,8 +13,9 @@
   "keywords": [
     "color",
     "output",
-    "nodejs",
-    "console"
+    "console",
+    "colout",
+    "cout"
   ],
   "author": "cyberaktiv@yandex.ru",
   "license": "ISC",

@@ -1,37 +1,42 @@
-var colout = require('colout').genColors();
+var colout = require('colout');
 
-colout.white('white text of message')
-	  .red('red text of message')
-	  .green('green text of message')
-	  .blue('blue text of message')
-	  .magenta('magenta text of message')
-	  .grey('grey text of message')
-	  .yellow('yellow text of message')
-	  .cyan('cyan text of message');
+colout.white('white message').endl();
+colout.red('red message').endl();
+colout.green('green message').endl();
+colout.blue('blue message').endl();
+colout.magenta('magenta message').endl();
+colout.grey('grey message').endl();
+colout.yellow('yellow message').endl();
+colout.cyan('cyan message').endl();
 
 colout.set('error', 'red')
       .set('warning', 'yellow')
       .set('ok', 'green')
       .set('myMethod', 'cyan');
 
-colout.error('This is error message')
-	  .warning('This is warning message')
-	  .ok('This is ok message')
-	  .myMethod('This is myMethod message');
+colout.error('This is red error message').endl();
+colout.warning('This is yellow warning message').endl();
+colout.ok('This is green ok message').endl();
+colout.myMethod('This is cyan myMethod message').endl();
 
-colout.red('red').green('green').blue('blue').cyan('cyan');
+colout.red('red').green('green').blue('blue').cyan('cyan').endl();
 
-colout.green('string', 123, [10, '20', 30], true, {'name':'test'}, '\n');
+colout.green('string1', 1, [10, 20], true, {'name':'test1'}).endl()
+      .yellow('string2', 2, [30, 40], false, {'name':'test2'}).endl()
+      .cyan('string3', 3, [50, 60], true, {'name':'test3'}).endl()
+      .red('string4', 4, [70, 80], false, {'name':'test4'}).endl();
 
+var arr = [10, 20, 30, 40, 50];
 var obj = {
     'first': {
         'second':{
             'third':{
-                'arr': [
-                    1, 2, 3, 4, 5
-                ]
+                'arr': arr
             }   
         }
     }
 };
-colout.green(obj);
+colout.green(arr).yellow(obj).endl();
+
+colout.green('message', '\n');
+colout.green('message').endl();
