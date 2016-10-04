@@ -85,7 +85,7 @@ colout.green(arr).yellow(obj).endl();
 
 **white(), red(), green(), blue(), magenta(), grey(), yellow(), cyan()** - paint content in the same color.
 
-**set(<name_method>, <text_color>)** - make your method.
+**set(name_method, text_color)** - make your method.
 
 **endl()** - add newline character (if necessary use). For example these records are the same:
 ```javascript
