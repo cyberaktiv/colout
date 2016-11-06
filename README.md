@@ -89,8 +89,8 @@ colout.yellow(arr);
 - **set()**
 - **diff()**
 
-**white(), red(), green(), blue(), magenta(), grey(), yellow(), cyan()** - paint content in the same color.
+**`white()`**, **`red()`**, **`green()`**, **`blue()`**, **`magenta()`**, **`grey()`**, **`yellow()`**, **`cyan()`** - paint content in the same color.
 
-**set(name_method, text_color)** - make your method.
+**`set(name_method, text_color)`** - make your method.
 
-**diff()** - display data in a single row with different colors.
+**`diff()`** - display data in a single row with different colors.
