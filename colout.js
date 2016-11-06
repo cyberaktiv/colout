@@ -7,7 +7,7 @@ var util = require('util');
 
 var Message = {
 	'error': function(msg){
-		this.print('\nERROR: '+ msg + '\n\n', 'red');
+		this.print('\nERROR from "colout": '+ msg + '\n\n', 'red');
 	},
 	'print': function(msg, color){
 		var color = (Colors.inList(color))?color:'white';
@@ -55,19 +55,35 @@ var Colout = function(){
 		
 		if(!Valid.name(name)) return;
 		color = (color && Valid.color(color))?color:'white';
-		
 		this[name] = function(){
 			var args = [].slice.call(arguments);
 			for(var i = 0; i < args.length; i++){
 				Message.print(args[i], color);
-			}			
-			return this;
+				process.stdout.write(' ');
+			}
+			process.stdout.write('\n');
 		};
 		return this;
 	};
 	this.endl = function(){
 		process.stdout.write('\n');
 		return this;
+	};
+	this.diff = function(data){
+		if(typeof data === 'object' && !Array.isArray(data)){
+			for(var color in data){
+				if(Colors.inList(color)){
+					Message.print(data[color], color);
+					process.stdout.write(' ');
+				} else {
+					Message.error('color "'+ color +'" is not exists, in method diff()');
+					process.stdout.write('\n');
+				}
+			}
+			process.stdout.write('\n');
+		} else {
+			Message.error('incorrect format of data for diff() method');
+		}
 	};
 	var genColors = function(obj){
 		Colors.list.forEach(function(color){
