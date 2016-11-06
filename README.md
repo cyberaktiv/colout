@@ -3,7 +3,7 @@ Colout is a Node utility that allows you to output color text in console. In the
 ## Getting started
 ### Install via npm:
 ```javascript
-npm install --save colout
+npm install colout
 ```
 ### Include:
 ```javascript
@@ -22,6 +22,10 @@ colout.cyan('cyan message');
 ```
 ![console output](https://github.com/cyberaktiv/colout/blob/master/test/output.png?raw=true)
 
+Supported any types of parameters:
+```javascript
+colout.green('string', 123, [10, 20, 30], true, {'name':'obj'});
+```
 You also nothing to prevent set methods with their names
 ```javascript
 colout.set('error', 'red')
@@ -58,10 +62,6 @@ Can be used eight standart colors:
 * **`yellow`**
 * **`cyan`**
 
-Supported any number and types of parameters:
-```javascript
-colout.green('string', 123, [10, 20, 30], true, {'name':'obj'});
-```
 Objects and arrays may be any nesting level:
 ```javascript
 var arr = [10, 20, 30, 40, {'numbers': [1, 2, 3]}];
