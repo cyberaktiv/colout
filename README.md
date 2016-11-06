@@ -40,12 +40,14 @@ If you want to display data in a single row with different colors then use diff 
 ```javascript
 colout.diff({
     'green': 'string',
-      'red': {name: 'object'},   
+      'red': {name: 'object'},
   'magenta': 1234,
    'yellow': [1, 2, 3, 4],
-     'grey': true,
+     'cyan': true
 });
 ```
+![console output](https://github.com/cyberaktiv/colout/blob/master/test/output_diff.png?raw=true)
+
 Can be used eight standart colors:
 * **`white`**
 * **`red`**

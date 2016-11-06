@@ -20,11 +20,11 @@ colout.ok('This is green ok message');
 colout.myMethod('This is cyan myMethod message');
 
 colout.diff({
-      'green': 'string',
-        'red': {name: 'object'},
-    'magenta': 1234,
-     'yellow': [1, 2, 3, 4],
-       'grey': true
+    'green': 'string',
+      'red': {name: 'object'},
+  'magenta': 1234,
+   'yellow': [1, 2, 3, 4],
+     'cyan': true
 });
 
 colout.green('string', 123, [10, 20, 30], true, {'name':'obj'});
