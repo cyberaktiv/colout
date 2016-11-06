@@ -1,6 +1,4 @@
 # Color Output in NodeJS
-![console output](https://github.com/cyberaktiv/colout/blob/master/test/output.png?raw=true)
-
 Colout is a Node utility that allows you to output color text in console. In the main, it can be used for debugging server applications.
 ## Getting started
 ### Install via npm:
@@ -22,6 +20,8 @@ colout.grey('grey message');
 colout.yellow('yellow message');
 colout.cyan('cyan message');
 ```
+![console output](https://github.com/cyberaktiv/colout/blob/master/test/output.png?raw=true)
+
 You also nothing to prevent set methods with their names
 ```javascript
 colout.set('error', 'red')
